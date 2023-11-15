@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 // // Декларативный стиль: описание структуры компонента React.
 // function App() {
 //   // Императивный стиль: прямые манипуляции с объектом Date.
@@ -27,9 +27,11 @@ import './App.css';
 // }
 
 // export default App;
-
+import logotip from './logo.svg';
+import './App.css';
 function App() {
-  // const currentYear = new Date().getFullYear();
+
+  const currentYear = new Date().getFullYear();
   // Создание элементов
   let appDiv = document.createElement('div');
   appDiv.className = 'App';
@@ -38,7 +40,7 @@ function App() {
   header.className = 'App-header';
 
   let logo = document.createElement('img');
-  logo.src = './logo.svg';
+  logo.src = logotip;
   logo.className = 'App-logo';
   logo.alt = 'logo';
 
@@ -58,11 +60,15 @@ function App() {
   link.rel = 'noopener noreferrer';
   link.textContent = 'Learn React';
 
+
+  let paragraphYear = document.createElement('p');
+  paragraphYear.textContent = currentYear;
+  
   // Структурирование элементов
   header.appendChild(logo);
   header.appendChild(paragraph);
   header.appendChild(link);
-
+  header.appendChild(paragraphYear);
   appDiv.appendChild(header);
 
   // Добавление созданных элементов на страницу
